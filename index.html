@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MUSIC WEBSITE </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<a href="#" class="logo">MUSIC <span>HUB</span>
+
+			<nav>
+				<ul>
+					<li><a href="#">MUSICS</a></li>
+					<li><a href="#">HITS</a></li>
+					<li><a href="#">PODCASTS</a></li>
+					<li><a href="#">NEW RELEASES</a></li>
+					<li><a href="#">LIBRARY</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="content">
+
+			<div class="left-col">
+				<h1>FEEL <br> THE <br> <span>MUSIC</span> </h1>
+			</div>
+
+			<img src="headphone.png" class="headphone">
+
+			<div class="right-col">
+				<p>Click to Listen</p>
+			<img src="play.png" class="play" id="icon">
+
+		</div>
+	</div>
+
+	<audio id="music">
+		<source src="music.mp3" type="audio/mp3">
+	</audio>
+
+	<script >
+		let music = document.getElementById("music")
+		let icon = document.getElementById("icon")
+
+		icon.onclick = function(){
+
+			if(music.paused){
+				music.play();
+				icon.src = "pause.png"
+			
+			}else{
+				music.pause();
+				icon.src = "play.png"
+			}
+		}
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
